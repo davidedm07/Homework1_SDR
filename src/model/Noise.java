@@ -5,7 +5,6 @@ import java.util.Random;
 public class Noise extends AbstractSignal {
 	private double varianza;
 	private double pot_rumore;
-	private double energy;
 	
 // costruttore della classe, a partire da un certo snr genera un rumore 
 	public Noise(double snr, int length) {
@@ -13,7 +12,6 @@ public class Noise extends AbstractSignal {
 		Random campione = null;
 		double snr_linearizzato= Math.pow(10, (snr/10));
 		this.pot_rumore= (1/snr_linearizzato);
-		double value=0;
 
 		for(int i = 0; i < length; i++) {
 			campione = new Random();
@@ -22,23 +20,14 @@ public class Noise extends AbstractSignal {
 			double immaginario = campione.nextGaussian() * Math.sqrt(pot_rumore/2);
 			Complex c=new Complex(reale,immaginario);
 			super.getValues().add(c);
-			value += Math.pow(c.abs(),2);
 
 		}
-		this.energy= value/length;
+
 		super.setLength(super.getValues().size());
 
 	}
 
 	// Getters and Setters della classe
-	
-	public double getEnergy() {
-		return energy;
-	}
-
-	public void setEnergy(double energy) {
-		this.energy = energy;
-	}
 
 	public double getVarianza() {
 		return varianza;
