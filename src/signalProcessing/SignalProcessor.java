@@ -75,7 +75,7 @@ public class SignalProcessor {
 		}
 	}
 /**
- * Metodo che calcola offline la soglia per determinare la probabulità di detection di un 
+ * Metodo che calcola offline la soglia per determinare la probabulitï¿½ di detection di un 
  * segnale 
  * @param x
  * @param snr
@@ -88,7 +88,7 @@ public class SignalProcessor {
 		double[] values=new double[numeroTentativi];
 		for (int i=0; i< numeroTentativi;i++) {
 			Noise r= new Noise(snr,x);
-			values[i]=r.getEnergy();			
+			values[i]=r.signalEnergy();			
 		}
 		
 		double soglia = mean (values) + (Math.sqrt(2*varianza(values))*invErf(1-2*pFa));

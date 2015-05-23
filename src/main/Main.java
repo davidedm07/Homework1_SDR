@@ -15,6 +15,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		FileReader f=new FileReader("C:/Users/Davide Di Maria/Documents/Libri-documenti universit�/3 ANNO/SDR/Sequenza_3/output_4.dat");
 		BufferedReader br= new BufferedReader(f);
+		int caazoneso=0;
 		List<Complex> l=new ArrayList<>();
 		String line=br.readLine();
         //int cont=0; // numero di campioni del segnale che si vuole prendere in esame

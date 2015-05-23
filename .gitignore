@@ -2,6 +2,7 @@
 /bin/
 *.class
 .project
+<<<<<<< HEAD
 .metadata
 .settings/
 .classpath
@@ -16,3 +17,7 @@ local.properties
 Thumbs.db
 Desktop.ini
 .svn
+=======
+.settings
+/bin/
+>>>>>>> b80da9b449693454ea8e3848976c18b274b56212
