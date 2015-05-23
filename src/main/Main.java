@@ -19,7 +19,7 @@ public class Main {
 		String line=br.readLine();
         //int cont=0; // numero di campioni del segnale che si vuole prendere in esame
         Scanner keyboard = new Scanner(System.in);
-//        System.out.println("Inserisci il numero di campioni su cui effettuare il test");
+//        System.out.println("Inserisci il numero di campioni su cui effettuare il test");;;;;
 //        cont =keyboard.nextInt();
 
 		while (line != null ){
